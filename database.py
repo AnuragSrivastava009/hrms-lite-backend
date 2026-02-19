@@ -12,7 +12,12 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 # DB_NAME = os.getenv("DB_NAME")
 
 # DATABASE_URL = f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-DATABASE_URL =f"mysql://root:LspSvjhMVQfnuLFiunVwTmSSDSGewXou@crossover.proxy.rlwy.net:29790/railway"
+# DATABASE_URL =f"mysql://root:LspSvjhMVQfnuLFiunVwTmSSDSGewXou@crossover.proxy.rlwy.net:29790/railway"
+DATABASE_URL = "mysql+pymysql://root:LspSvjhMVQfnuLFiunVwTmSSDSGewXou@crossover.proxy.rlwy.net:29790/railway"
+
+engine = create_engine(DATABASE_URL, echo=True)
+
+
 
 engine = create_engine(DATABASE_URL, echo=True)
 print("engine",engine)
